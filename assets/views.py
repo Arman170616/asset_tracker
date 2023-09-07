@@ -8,6 +8,9 @@ class CompanyList(generics.ListCreateAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
 
+class CompanyCreate(generics.CreateAPIView):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
 
 class CompanyDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Company.objects.all()
