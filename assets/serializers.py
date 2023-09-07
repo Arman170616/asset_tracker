@@ -20,3 +20,4 @@ class DeviceAssignmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeviceAssignment
         fields = '__all__'
+        depth = 1
