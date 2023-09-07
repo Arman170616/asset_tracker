@@ -8,4 +8,11 @@ class CompanyAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Company, CompanyAdmin)
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ('user', 'company', 'position', 'created_at')
+    list_filter = ('company', 'position')
+admin.site.register(Employee, EmployeeAdmin)
+admin.site.register(Device)
+admin.site.register(DeviceAssignment)
+
 
