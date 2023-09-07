@@ -42,6 +42,34 @@ class EmployeeDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EmployeeSerializer
 
 
+class DeviceList(generics.ListCreateAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
 
+class DeviceCreate(generics.CreateAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
+class DeviceDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
+
+
+class DeviceAssignmentList(generics.ListCreateAPIView):
+    queryset = DeviceAssignment.objects.all()
+    serializer_class = DeviceAssignmentSerializer
+
+
+class DeviceAssignmentCreate(generics.CreateAPIView):
+    queryset = DeviceAssignment.objects.all()
+    serializer_class = DeviceAssignmentSerializer
+
+
+class DeviceAssignmentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = DeviceAssignment.objects.all()
+    serializer_class = DeviceAssignmentSerializer
+
+    
 
 
